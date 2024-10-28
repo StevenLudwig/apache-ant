@@ -1,0 +1,13 @@
+name: sl
+
+services:
+  apache:
+    container_name: apache
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sleep infinity
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/home/ubuntu/app
